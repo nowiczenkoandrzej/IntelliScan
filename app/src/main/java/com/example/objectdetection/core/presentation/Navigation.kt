@@ -42,12 +42,9 @@ fun Navigation() {
             val objectsNames = backStackEntry.arguments?.getString(OBJECT_NAMES_KEY)
             val names = objectsNames?.split(",") ?: emptyList()
 
-           // val viewModel = hiltViewModel<SummaryViewModel>()
-
             SummaryScreen(
                 navController = navController,
                 objectsNames = names,
-                //viewModel = viewModel
             )
         }
 

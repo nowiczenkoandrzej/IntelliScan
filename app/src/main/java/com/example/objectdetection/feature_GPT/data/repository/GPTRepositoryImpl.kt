@@ -10,7 +10,6 @@ import com.aallam.openai.api.model.ModelId
 import com.aallam.openai.client.OpenAI
 import com.example.objectdetection.core.domain.model.Resource
 import com.example.objectdetection.feature_GPT.domain.repository.GPTRepository
-import com.example.objectdetection.feature_GPT.domain.repository.api_key
 import javax.inject.Inject
 
 class GPTRepositoryImpl @Inject constructor(

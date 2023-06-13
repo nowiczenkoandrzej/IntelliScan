@@ -2,18 +2,15 @@ package com.example.objectdetection
 
 import android.content.Context
 import android.graphics.*
-import android.media.Image
-import android.util.Log
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
-import com.example.objectdetection.feature_object_detection.domain.model.ObjectDetectionScreenState
+import com.example.objectdetection.feature_object_detection.presentation.ObjectDetectionScreenState
 import com.example.objectdetection.ml.SsdMobilenetV11Metadata1
 import kotlinx.coroutines.runBlocking
 import org.tensorflow.lite.support.common.FileUtil
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
-import java.io.ByteArrayOutputStream
 
 class TensorFlowAnalyzer(
     private val callback: FrameAnalysisCallback,
@@ -75,7 +72,6 @@ class TensorFlowAnalyzer(
             val locations = outputs.locationsAsTensorBuffer.floatArray
             val classes = outputs.classesAsTensorBuffer.floatArray
             val scores = outputs.scoresAsTensorBuffer.floatArray
-            val numberOfDetections = outputs.numberOfDetectionsAsTensorBuffer.floatArray
 
             val canvas = Canvas(mutableBitmap)
 

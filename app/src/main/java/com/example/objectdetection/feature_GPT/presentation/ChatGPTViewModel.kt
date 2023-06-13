@@ -1,6 +1,6 @@
 package com.example.objectdetection.feature_GPT.presentation
 
-import android.util.Log
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.objectdetection.core.domain.model.Resource
@@ -25,12 +25,9 @@ class ChatGPTViewModel @Inject constructor(
 
         viewModelScope.launch {
 
-            Log.d("TAG", "enterActivity: ChatGptScreen viewmodel inside viewmodel scope")
             setState(isLoading = true)
 
             val prompt = createPrompt(objects = objects)
-
-            Log.d("TAG", "enterActivity: prompt = $prompt")
 
             val response = repository.askGpt(
                 prompt = prompt

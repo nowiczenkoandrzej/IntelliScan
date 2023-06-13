@@ -1,4 +1,4 @@
-package com.example.objectdetection.feature_object_detection.domain.model
+package com.example.objectdetection.feature_object_detection.presentation
 
 import android.graphics.Bitmap
 

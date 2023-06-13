@@ -2,7 +2,6 @@ package com.example.objectdetection.feature_object_detection.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.objectdetection.feature_object_detection.domain.model.ObjectDetectionScreenState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

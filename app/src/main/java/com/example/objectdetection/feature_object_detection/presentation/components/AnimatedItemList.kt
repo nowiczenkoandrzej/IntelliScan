@@ -21,8 +21,6 @@ import com.example.objectdetection.ui.theme.ItemColor
 @Composable
 fun AnimatedItemList(
     objects: List<String>,
-    isDeleteButtonVisible: Boolean = false,
-    onDeleteButtonClick: (objectName: String) -> Unit = {}
 ) {
 
 
